@@ -1,0 +1,19 @@
+.pp-main {
+  container-type: inline-size;
+}
+
+.pp-contract-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+@container (max-width: 560px) {
+  .pp-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-entry-list {
+    max-height: 180px;
+    border-right: 0;
+    border-bottom: 1px solid var(--dsw-alias-border-l2);
+  }
+}

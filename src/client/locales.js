@@ -1,0 +1,42 @@
+export const LOCALE_NS = 'prompt-presets'
+
+export const zh = {
+  create: '新建空白预设',
+  profileId: '预设 ID（小写字母、数字、连字符或下划线）',
+  idExists: '此预设 ID 已存在，请选择新 ID。',
+  emptyHelp: '未内置任何内容。新建空白预设，或导入你有权使用的 ST JSON。',
+  nav: '提示词预设',
+  loading: '正在载入提示词预设…',
+  empty: '暂无提示词 profile',
+  search: '搜索 profile',
+  save: '保存新版本',
+  validate: '校验',
+  import: '导入 ST JSON',
+  export: '导出 ST JSON',
+  duplicate: '复制',
+  addEntry: '添加条目',
+  deleteEntry: '删除条目',
+  moveUp: '上移',
+  moveDown: '下移',
+  profile: 'Profile',
+  entries: '条目',
+  contract: '叙事合同',
+  diagnostics: '诊断',
+  session: '会话提示词',
+  nextTurn: '下一轮生效',
+  applyNext: '应用到下一轮',
+  reset: '重置会话覆盖',
+  cardDefault: '恢复卡片默认',
+}
+
+export const en = {
+  create: 'Create blank profile',
+  profileId: 'Profile ID (lowercase letters, digits, hyphens or underscores)',
+  idExists: 'This profile ID exists. Choose a new ID.',
+  emptyHelp: 'No content is bundled. Create a blank profile or import ST JSON you have permission to use.',
+  nav: 'Prompt Presets', loading: 'Loading prompt presets…', empty: 'No prompt profiles', search: 'Search profiles',
+  save: 'Save new version', validate: 'Validate', import: 'Import ST JSON', export: 'Export ST JSON', duplicate: 'Duplicate',
+  addEntry: 'Add entry', deleteEntry: 'Delete entry', moveUp: 'Move up', moveDown: 'Move down', profile: 'Profile', entries: 'Entries',
+  contract: 'Narrative contract', diagnostics: 'Diagnostics', session: 'Session prompts', nextTurn: 'Applies next turn', applyNext: 'Apply next turn',
+  reset: 'Reset session overlay', cardDefault: 'Revert to card default',
+}
