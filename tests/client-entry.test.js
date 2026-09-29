@@ -47,11 +47,12 @@ function context() {
   return { ctx, seats, t, remote }
 }
 
-test('settings and session dock consume the rc.1 slot owner props', async () => {
+test('settings and session dock consume the rc.2 slot owner props', async () => {
   const client = await loadClient()
   const { ctx, seats, t } = context()
   client.apply(ctx)
-  assert.equal(seats.get('settings.section').render({ t }).props.t, t)
+  assert.equal(seats.has('settings.section'), false)
+  assert.equal(seats.get('settings.plugins.tab').render({}).props.t, t)
   const dock = seats.get('conversation.input.dock')
   const element = dock.render({ session: { id: 'session-current' }, input: {}, t })
   assert.equal(element.props.sessionId, 'session-current')

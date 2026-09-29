@@ -4,15 +4,15 @@ Versioned prompt editing, composition and SillyTavern JSON import/export for Dee
 
 ## Install
 
-Requires Node.js 24, npm and DSH **0.1.2-rc.1**. Later host versions are not certified.
+Requires Node.js 24, npm and DSH **0.1.7-rc.2**.
 
 ```sh
 git clone https://github.com/LiweiDonVee/dsh-prompt-presets.git
 cd dsh-prompt-presets
 npm ci
 npm run check
-npx --yes @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web add .
-npx --yes @deepseek-ai/dsh@0.1.2-rc.1 web
+npx --yes @deepseek-ai/dsh@0.1.7-rc.2 plugin --profile web add .
+npx --yes @deepseek-ai/dsh@0.1.7-rc.2 web
 ```
 
 Restart the host after installation, keep the clone if installed as a local link, and open its printed authentication URL. In **Settings → Prompt Presets**, choose **Create blank profile** or import a JSON file you have permission to use. Add your own entries, edit ordering/groups/roles and save a version. The interface includes English and Chinese navigation; some detailed editing labels remain Chinese in this preview.
@@ -48,11 +48,11 @@ The authenticated loopback HTTP API at `/prompt-presets/api` includes `GET /cata
 - Session logs are not migrated by this plugin. Uninstall stops the editor/service but retains user profile data.
 
 ```sh
-npx --yes @deepseek-ai/dsh@0.1.2-rc.1 plugin --profile web remove dsh-prompt-presets
+npx --yes @deepseek-ai/dsh@0.1.7-rc.2 plugin --profile web remove dsh-prompt-presets
 ```
 
 ## Development
 
-`npm run check` runs deterministic synthetic-fixture tests and builds `lib/`. Tests cover empty startup, first user save, content-free packaging contract, composition, pinned versions, overlays, imports and HTTP authentication. Test strings are artificial data and are excluded from installation archives. CI covers Windows/Ubuntu with Node 24. No private workspace, third-party prompt pack or model account is needed.
+`npm run check` runs deterministic synthetic-fixture tests and builds `lib/`. Tests cover empty startup, first user save, content-free packaging contract, rc.2 UI slot registration, composition, pinned versions, overlays, imports and HTTP authentication. Test strings are artificial data and are excluded from installation archives. CI covers Windows/Ubuntu with Node 24. No private workspace, third-party prompt pack or model account is needed.
 
 MIT. Independent community project; see [NOTICE](NOTICE.md), [SECURITY](SECURITY.md) and [CONTRIBUTING](CONTRIBUTING.md).
