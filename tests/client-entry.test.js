@@ -54,7 +54,7 @@ test('settings and session dock consume the rc.2 slot owner props', async () => 
   assert.equal(seats.has('settings.section'), false)
   assert.equal(seats.get('settings.plugins.tab').render({}).props.t, t)
   const dock = seats.get('conversation.input.dock')
-  const element = dock.render({ session: { id: 'session-current' }, input: {}, t })
+  const element = dock.render({ session: { sessionId: 'session-current' }, input: {}, t })
   assert.equal(element.props.sessionId, 'session-current')
   assert.equal(element.props.t, t)
 })
